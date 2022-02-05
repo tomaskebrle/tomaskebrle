@@ -6,7 +6,7 @@ date: '2022-05-02'
 published: true
 ---
 
-In this guide I will show you how to use firebase version 9 with sveltekit the best way I could find. So let's start.
+In this guide I will show you how to use firebase version 9 with sveltekit the best way I could find.
 
 # Prerequisites
 

@@ -24,7 +24,19 @@
 	import PageHead from '$lib/components/PageHead.svelte';
 	import ArticleTitle from '$lib/components/ArticleTitle.svelte';
 	import BreadCrumbs from '$lib/components/BreadCrumbs.svelte';
+	import { onMount } from 'svelte';
 	export let post;
+	let article;
+	let time;
+	const calculateReadingTime = () => {
+		const text = article.innerText;
+		const wpm = 250;
+		const words = text.trim().split(/\s+/).length;
+		time = Math.ceil(words / wpm);
+	};
+	onMount(() => {
+		calculateReadingTime();
+	});
 </script>
 
 <svelte:head>
@@ -32,11 +44,14 @@
 </svelte:head>
 
 <PageHead title={post.title} description={post.description} />
-<article class="dark:bg-grue-1 bg-grue-4 text-grue-1 dark:text-grue-4 min-h-screen">
+<article
+	class="dark:bg-grue-1 bg-grue-4 text-grue-1 dark:text-grue-4 min-h-screen"
+	bind:this={article}
+>
 	<div
-		class="mx-auto container py-16 prose dark:prose-invert prose-headings:font-mono prose-headings:no-underline prose-a:prose-headings:no-underline prose-a:font-mono"
+		class="mx-auto py-16 prose dark:prose-invert prose-headings:font-mono prose-headings:no-underline prose-a:prose-headings:no-underline prose-a:font-mono"
 	>
-		<ArticleTitle title={post.title} date={post.date} />
+		<ArticleTitle title={post.title} date={post.date} {time} />
 		<slot />
 	</div>
 </article>

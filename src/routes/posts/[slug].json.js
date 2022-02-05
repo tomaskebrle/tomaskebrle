@@ -21,7 +21,6 @@ export async function get({ params }) {
 	}
 
 	const post = await match[1]();
-
 	return {
 		body: post.metadata
 	};

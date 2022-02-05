@@ -20,14 +20,12 @@
 					>Firebase</Link
 				>
 			</DarkCard>
-			<DarkCard link="https://vodacilouny.ovh">
-				<h1>Vodní skauti Louny</h1>
 
-				A website I made for my scouts club. With news and events from it.
-				<br />
-
-				The site is made using <Link href="https://gohugo.io">hugo</Link> as static site generator and
-				<Link href="https://materializecss.com">MaterializeCSS</Link>
+			<DarkCard link="https://tomaskebrle.cz">
+				<h1>My personal website</h1>
+				This is my personal website. It contains some contact information, and a blog where I write things
+				i want to remember and which other might find useful. It is built using SvelteKit, TailwindCSS
+				and Firebase. For the blog I use MDSVEX and prismjs
 			</DarkCard>
 		</span>
 
@@ -44,13 +42,14 @@
 					href="https://firebase.google.com">Firestore</Link
 				>
 			</DarkCard>
+			<DarkCard link="https://vodacilouny.ovh">
+				<h1>Vodní skauti Louny</h1>
 
-			<DarkCard link="https://tomaskebrle.cz">
-				<h1>My personal website</h1>
-				This is my personal website. I just made it because I alreade bought the domain so why not use
-				it. It contains some contact information. And I also have a blog here because I wanted to learn
-				<Link href="https://mdsvex.pngwn.io/">MDSVEX</Link>
-				and I write there stuff I wanna remeber.
+				A website I made for my scouts club. With news and events from it.
+				<br />
+
+				The site is made using <Link href="https://gohugo.io">hugo</Link> as static site generator and
+				<Link href="https://materializecss.com">MaterializeCSS</Link>
 			</DarkCard>
 		</span>
 	</div>
