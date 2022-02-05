@@ -25,7 +25,6 @@
 	import ArticleTitle from '$lib/components/ArticleTitle.svelte';
 	import BreadCrumbs from '$lib/components/BreadCrumbs.svelte';
 	export let post;
-	console.log(post);
 </script>
 
 <svelte:head>
