@@ -2,12 +2,12 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from "../components/Header.astro"
 import Navbar from "../components/Navbar.svelte"
+import About from "../components/About.astro"
+
 
 let title = 'Example Blog';
 let description = 'The perfect starter for your perfect blog.';
 let permalink = 'https://example.com/';
-
-
 
 // let allPosts = await Astro.glob('./posts/*.md');
 // allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
@@ -29,9 +29,10 @@ let permalink = 'https://example.com/';
         background-size: cover;
       }
     </style>
-    <main class="w-full px-[8.333333%]">
+    <main class="w-full px-[16.666667%]">
       <Navbar client:only="svelte"/>
       <Header/>
+      <About/>
     </main>
 	</body>
 </html>

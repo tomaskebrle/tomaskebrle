@@ -1,0 +1,34 @@
+---
+  import SectionHeading from "./SectionHeading.astro";
+  import Item from "./Item.astro";
+---
+
+
+<section class="mb-32">
+  <SectionHeading>About Me</SectionHeading>
+  <div class="flex gap-8 text-lg text-[#acacac] w-full">
+    <span class="w-7/12">
+      Jsem student, web-developer, programátor z Loun. <br> <br>
+
+      Zde studuji na všeobecném gymnáziu, ale svoje znalosti mám ze samostudia. <br><br>
+
+      Nejvíce pracuji s web technologiemi, ale učím se i  backend. Také mně dost zajíma dev-ops  a Linux. <br><br>
+    </span>
+    <span class="flex gap-16 w-5/12">
+      <ul>
+        <Item>Javascript & Typescript</Item>
+        <Item>Svelte & Sveltekit</Item>
+        <Item>React & Next.js</Item>
+        <Item>Tailwind CSS</Item>
+        <Item>Flutter</Item>
+      </ul>
+      <ul>
+        <Item>Node.js</Item>
+        <Item>Storybook</Item>
+        <Item>Firebase</Item>
+        <Item>Supabase</Item>
+        <Item>Linux</Item>
+      </ul>
+    </span>
+  </div>
+</section>
