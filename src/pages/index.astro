@@ -3,14 +3,49 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from "../components/Header.astro"
 import Navbar from "../components/Navbar.svelte"
 import About from "../components/About.astro"
-
-
+import Portfolio from "../components/Portfolio.astro"
+import Contact from "../components/Contact.astro"
+import Blog from "../components/Blog.astro"
+import Footer from "../components/Footer.astro"
+import {Language} from "../types"
 let title = 'Example Blog';
 let description = 'The perfect starter for your perfect blog.';
 let permalink = 'https://example.com/';
 
 // let allPosts = await Astro.glob('./posts/*.md');
 // allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
+
+const language:Language = {
+  nav : {
+    about: "About me",
+    contact : "Contact",
+    portfolio : "Portfolio",
+    blog : "Blog"
+  },
+  header: {
+    name: "Tomáš Kebrle",
+    tagline: "Student, programmer & web-developer"
+  },
+  about: {
+    title: "About me",
+    text : "Hello 👋, I am a programmer, web-developer and programmer from Czech republic. I study there on an all-around Gymnasium, but all my programming knowledge is entirely self taught. I mostly work with web-technologies, but I am also learning how to do backend. And I am also interested in Linux and Dev-Ops",
+  },
+  portfolio: {
+    card1: {
+      title : "Maturita Book",
+      description: "Maturita book is an web-application with a list of book that need to be read for gradutation at my school. I got the data from Google books API. The app is written in NextJS and uses Supabase and GraphQL",
+      link: "https://maturita-book.vercel.app",
+      image: "/assets/schoolmesh.png",
+    },
+    card2: {
+      title : "My personal website",
+      description : "SEO-Friendly, personal website with a blog and ways to contact me. I created the website to learn Astro. For styling I used TailwindCSS. And the blog is just markdown files.",
+      link: "https://tomaskebrle.cz",
+      image: "/assets/schoolmesh.png",
+    }
+  },
+  contact: "Do you need a web-site, or web-app? Turn your idea into reality? Do not hesitate and contact me!"
+}
 
 ---
 
@@ -24,15 +59,19 @@ let permalink = 'https://example.com/';
 	<body>
   <style>
       main{
-        background-image: linear-gradient(0deg, #031927 55.73%, rgba(3, 25, 39, 0.85) 100%), url("/assets/bg.jpg");
+        background-image: linear-gradient(0deg, #031927 35%, rgba(3, 25, 39, 0.85) 100%), url("/assets/bg.jpg");
         background-position: center;
         background-size: cover;
       }
     </style>
-    <main class="w-full px-[16.666667%]">
-      <Navbar client:only="svelte"/>
-      <Header/>
-      <About/>
+    <main class="w-full px-4 lg:px-[16.666667%]">
+      <Navbar client:only="svelte" language={language}/>
+      <Header tagline={language.header.tagline}/>
+      <About text={language.about.text} title={language.about.title}/>
+      <Portfolio portfolio={language.portfolio}/>
+      <Contact contact={language.contact}></Contact>
+      <Blog/>
     </main>
+    <Footer></Footer>
 	</body>
 </html>

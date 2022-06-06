@@ -1,43 +1,48 @@
-<script>
+<script lang="ts">
+  import { Language } from "../types";
   let active = "about";
+
+  export let language: Language;
 </script>
 
 <nav class="py-8 flex items-center gap-4 w-full text-[#acacac]">
   <span class="text-[#BA1200] text-4xl font-mono font-medium m-4">
     &#123;tk&#125;
   </span>
-  <div class:active={active == "about"}>
-    <a
-      href="/#about"
-      on:click={() => {
-        active = "about";
-      }}>About me</a
-    >
-  </div>
-  <div class:active={active == "contact"}>
-    <a
-      href="/#contact"
-      on:click={() => {
-        active = "contact";
-      }}>Contact</a
-    >
-  </div>
-  <div class:active={active == "portfolio"}>
-    <a
-      href="/#portfolio"
-      on:click={() => {
-        active = "portfolio";
-      }}>Portfolio</a
-    >
-  </div>
-  <div class:active={active == "blog"}>
-    <a
-      href="/#blog"
-      on:click={() => {
-        active = "blog";
-      }}>Blog</a
-    >
-  </div>
+  <span class="hidden lg:flex gap-4">
+    <div class:active={active == "about"}>
+      <a
+        href="/#about"
+        on:click={() => {
+          active = "about";
+        }}>{language.nav.about}</a
+      >
+    </div>
+    <div class:active={active == "contact"}>
+      <a
+        href="/#contact"
+        on:click={() => {
+          active = "contact";
+        }}>{language.nav.contact}</a
+      >
+    </div>
+    <div class:active={active == "portfolio"}>
+      <a
+        href="/#portfolio"
+        on:click={() => {
+          active = "portfolio";
+        }}>{language.nav.portfolio}</a
+      >
+    </div>
+    <div class:active={active == "blog"}>
+      <a
+        href="/#blog"
+        on:click={() => {
+          active = "blog";
+        }}>{language.nav.blog}</a
+      >
+    </div>
+  </span>
   <span class="flex-grow" />
   <a
     href="mailto:tomas.kebrle@proton.me"
