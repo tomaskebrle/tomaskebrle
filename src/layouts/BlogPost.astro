@@ -19,7 +19,7 @@ const { title, description, publishDate, author, heroImage, permalink, alt } = c
 	</head >
 	<body class="w-full bg-[#031927] flex justify-center gap-32">
       <main class="max-w-prose">
-        <BlogNavbar client:only/>
+        <BlogNavbar client:load />
         <article class="prose prose-invert prose-headings:font-mono py-4">
           <span class="text-6xl font-mono text-white font-bold">{title}</span>
           <slot/>

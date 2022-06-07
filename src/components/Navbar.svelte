@@ -70,8 +70,8 @@
     color: #ba1200;
   }
 
-  .active:before,
-  div:hover:before {
+  div:hover:before,
+  .active:before {
     position: absolute;
     content: "";
     position: absolute;

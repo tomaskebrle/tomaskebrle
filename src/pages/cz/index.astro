@@ -65,7 +65,7 @@ const language:Language = {
       }
     </style>
     <main class="w-full px-4 lg:px-[16.666667%]">
-      <Navbar client:only="svelte" language={language}/>
+      <Navbar language={language}/>
       <Header tagline={language.header.tagline}/>
       <About text={language.about.text} title={language.about.title}/>
       <Portfolio portfolio={language.portfolio}/>
