@@ -1,0 +1,27 @@
+---
+  import Button from "./Button.astro"
+  
+  interface Props {
+    image?: string
+    alt?: string,
+    heading?:string,
+    description?: string,
+    link?: string
+  }
+
+
+  const { image,alt, heading, description, link } :Props = Astro.props
+---
+
+<div class="bg-[#010C13] rounded-2xl hover:-translate-y-3 p-4 w-full h-max duration-300 mb-4">
+  <img src={image} alt={alt} class="rounded-2xl">
+  <h3 class="text-white text-4xl my-4">{heading}</h3>
+  <p class="text-[#acacac] text-lg mb-12">
+    {description}
+  </p>
+
+  <Button>
+    Přejít na stránku
+  </Button>
+
+</div> 

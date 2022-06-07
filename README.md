@@ -1,3 +1,3 @@
 # tomaskebrle.cz
 
-My personal website and blog, built with sveltekit, tailwindcss, mdsvex, prismjs and firebase.
+My personal site built with Astro and TailwindCSS

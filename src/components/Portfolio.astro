@@ -1,0 +1,27 @@
+---
+import SectionHeading from "./SectionHeading.astro";
+import PortfolioCard from "./PortfolioCard.astro";
+import {Language} from "../types"
+
+const {portfolio} = Astro.props as Language
+---
+
+<section class="mb-32" id="portfolio">
+  <SectionHeading>Portfolio</SectionHeading>
+  <div class="lg:flex gap-4">
+    <PortfolioCard 
+      alt={portfolio.card1.title}
+      description={portfolio.card1.description}
+      heading={portfolio.card1.title}
+      link={portfolio.card1.link}
+      image={portfolio.card1.image}
+    />
+    <PortfolioCard 
+      alt={portfolio.card2.title}
+      description={portfolio.card2.description}
+      heading={portfolio.card2.title}
+      link={portfolio.card2.link}
+      image={portfolio.card2.image}
+    />
+  </div>
+</section>

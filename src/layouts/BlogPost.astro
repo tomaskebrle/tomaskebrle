@@ -1,0 +1,32 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import BlogNavbar from '../components/BlogNavbar.svelte';
+import TableOfContents from "../components/TableOfContents.svelte"
+
+const { content } = Astro.props;
+const { title, description, publishDate, author, heroImage, permalink, alt } = content;
+---
+
+<html lang={content.lang || 'en'}>
+	<head>
+		<link rel="stylesheet" href="https://raw.githubusercontent.com/PrismJS/prism-themes/master/themes/prism-night-owl.css"/>
+		<BaseHead {title} {description} {permalink} />
+    <style>
+      html {
+        scroll-padding-top: 20px;
+      }
+    </style>
+	</head >
+	<body class="w-full bg-[#031927] flex justify-center gap-32">
+      <main class="max-w-prose">
+        <BlogNavbar client:only/>
+        <article class="prose prose-invert prose-headings:font-mono py-4">
+          <span class="text-6xl font-mono text-white font-bold">{title}</span>
+          <slot/>
+        </article>
+      </main>
+      <aside>
+        <TableOfContents client:only></TableOfContents>
+      </aside>
+	</body>
+</html>
