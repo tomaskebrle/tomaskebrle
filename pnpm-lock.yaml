@@ -9,6 +9,7 @@ specifiers:
   '@play-when-visible/react-spring': ^1.0.5
   '@react-spring/parallax': ^9.4.5
   '@react-spring/web': ^9.4.5
+  '@tailwindcss/typography': ^0.5.2
   animate.css: ^4.1.1
   astro: ^1.0.0-beta.30
   dayjs: ^1.11.2
@@ -26,6 +27,7 @@ dependencies:
   '@play-when-visible/react-spring': 1.0.5_3226604c451902a6b58c1709e71e2ba2
   '@react-spring/parallax': 9.4.5_react-dom@18.1.0+react@18.1.0
   '@react-spring/web': 9.4.5_react-dom@18.1.0+react@18.1.0
+  '@tailwindcss/typography': 0.5.2
   animate.css: 4.1.1
   dayjs: 1.11.2
   preact: 10.7.2
@@ -702,6 +704,16 @@ packages:
       vite: 2.9.9
     transitivePeerDependencies:
       - supports-color
+    dev: false
+
+  /@tailwindcss/typography/0.5.2:
+    resolution: {integrity: sha512-coq8DBABRPFcVhVIk6IbKyyHUt7YTEC/C992tatFB+yEx5WGBQrCgsSFjxHUr8AWXphWckadVJbominEduYBqw==}
+    peerDependencies:
+      tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1 || insiders'
+    dependencies:
+      lodash.castarray: 4.4.0
+      lodash.isplainobject: 4.0.6
+      lodash.merge: 4.6.2
     dev: false
 
   /@types/acorn/4.0.6:
@@ -2329,6 +2341,18 @@ packages:
     dependencies:
       p-locate: 5.0.0
     dev: true
+
+  /lodash.castarray/4.4.0:
+    resolution: {integrity: sha512-aVx8ztPv7/2ULbArGJ2Y42bG1mEQ5mGjpdvrbJcJFU3TbYybe+QlLS4pst9zV52ymy2in1KpFPiZnAOATxD4+Q==}
+    dev: false
+
+  /lodash.isplainobject/4.0.6:
+    resolution: {integrity: sha512-oSXzaWypCMHkPC3NvBEaPHf0KsA5mvPrOPgQWDsbg8n7orZ290M0BmC/jgRZ4vcJ6DTAhjrsSYgdsW/F+MFOBA==}
+    dev: false
+
+  /lodash.merge/4.6.2:
+    resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
+    dev: false
 
   /lodash/4.17.21:
     resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}

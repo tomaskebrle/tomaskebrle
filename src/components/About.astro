@@ -2,16 +2,15 @@
   import SectionHeading from "./SectionHeading.astro";
   import Item from "./Item.astro";
   import {Language} from "../types"
-
   const { text, title} = Astro.props as Language["about"]
 ---
 
 
-<section class="mb-32">
+<section class="mb-32" id="about">
   <SectionHeading>{title}</SectionHeading>
   <div class="lg:flex gap-8 text-lg text-[#acacac] w-full">
     <span class="lg:w-7/12">
-      {text}
+      <Fragment set:html={text}></Fragment>
     </span>
     <span class="flex gap-16 lg:w-5/12">
       <ul>

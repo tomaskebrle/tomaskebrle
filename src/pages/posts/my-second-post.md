@@ -2,20 +2,20 @@
 setup: |
   import Layout from '../../layouts/BlogPost.astro'
 title: Hello world!
-publishDate: 12 Sep 2021
+publishDate: 7 Jun 2022
 name: Nate Moore
 value: 128
 description: Just a Hello World Post!
 ---
 
-This is so cool!
+# Heading 1
 
-Do variables work {frontmatter.value \* 2}?
+## Heading 2
 
-```javascript
-// Example JavaScript
-const x = 7;
-function returnSeven() {
-  return x;
-}
-```
+### Heading 3
+
+#### Heading 4
+
+##### Heading 5
+
+###### Heading 6
