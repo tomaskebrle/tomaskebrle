@@ -11,7 +11,6 @@
       text: title.innerText,
       level: `pl-[${title.nodeName.split("H")[1] * 0.25 * 6}rem]`,
     }));
-    console.log(titles);
   });
 </script>
 

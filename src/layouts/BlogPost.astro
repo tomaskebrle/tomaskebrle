@@ -5,6 +5,7 @@ import TableOfContents from "../components/TableOfContents.svelte"
 
 const { content } = Astro.props;
 const { title, description, publishDate, author, heroImage, permalink, alt } = content;
+
 ---
 
 <html lang={content.lang || 'en'}>
@@ -17,8 +18,8 @@ const { title, description, publishDate, author, heroImage, permalink, alt } = c
       }
     </style>
 	</head >
-	<body class="w-full bg-[#031927] flex justify-center gap-32">
-      <main class="max-w-prose">
+	<body class="w-full bg-[#031927] lg:flex lg:justify-center p-4 lg:p-0 gap-32">
+      <main class="lg:max-w-prose">
         <BlogNavbar client:load />
         <article class="prose prose-invert prose-headings:font-mono py-4">
           <span class="text-6xl font-mono text-white font-bold">{title}</span>

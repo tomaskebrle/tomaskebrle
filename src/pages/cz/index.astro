@@ -53,7 +53,6 @@ const language:Language = {
 	<head>
 		<BaseHead {title} {description} {permalink} />
     <script src="https://kit.fontawesome.com/0611ddbb9f.js" crossorigin="anonymous"></script>
-    
   </head>
 
 	<body>
@@ -73,5 +72,12 @@ const language:Language = {
       <Blog/>
     </main>
     <Footer></Footer>
+    <script is:inline src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script is:inline>
+      AOS.init({
+        duration: 500,
+      });
+    </script>
 	</body>
 </html>
+
