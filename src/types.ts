@@ -19,11 +19,13 @@ export interface Language {
       description: string;
       link: string;
       image: string;
+      shortlink: string;
     };
     card2: {
       title: string;
       description: string;
       link: string;
+      shortlink: string;
       image: string;
     };
   };

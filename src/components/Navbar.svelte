@@ -48,9 +48,9 @@
   </span>
   <span class="flex-grow" />
   <a
-    href="mailto:tomas.kebrle@proton.me"
+    href="mailto:contact@tomaskebrle.cz"
     class="font-bold hover:text-[#ba1200] duration-300"
-    >tomas.kebrle@proton.me</a
+    >contact@tomaskebrle.cz</a
   >
 </nav>
 

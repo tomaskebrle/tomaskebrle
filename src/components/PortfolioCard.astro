@@ -6,11 +6,12 @@
     alt?: string,
     heading?:string,
     description?: string,
-    link?: string
+    link?: string,
+    shortlink?: string
   }
 
 
-  const { image,alt, heading, description, link } :Props = Astro.props
+  const { image,alt, heading, description, link, shortlink } :Props = Astro.props
 ---
 
 <div class="bg-[#010C13] rounded-2xl hover:-translate-y-3 p-4 w-full h-max duration-300 mb-4">
@@ -21,7 +22,7 @@
   </p>
 
   <Button>
-    Přejít na stránku
+    {shortlink}
   </Button>
 
 </div> 
