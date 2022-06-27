@@ -1,15 +1,22 @@
 const fs = require("fs");
 const puppeteer = require("puppeteer");
 const { fileURLToPath } = require("node:url");
-module.exports = () => {
+module.exports = (options) => {
   return {
     name: "astro-og-image",
     hooks: {
       "astro:build:done": async ({ dir, routes }) => {
+        let path = options.config.path;
         // Filters all the routes that need OG image
         let filteredRoutes = routes.filter((route) =>
-          route.pathname.includes("/posts/")
+          route.pathname.includes(path)
         );
+
+        // Creates a directory for the images if it doesn't exist already
+        let directory = fileURLToPath(new URL(`./assets${path}`, dir));
+        if (!fs.existsSync(directory)) {
+          fs.mkdirSync(directory);
+        }
 
         const browser = await puppeteer.launch();
         for (const route of filteredRoutes) {
@@ -17,11 +24,6 @@ module.exports = () => {
           const data = fs.readFileSync(route.distURL.pathname, "utf-8");
           let title = await data.match(/<title[^>]*>([^<]+)<\/title>/)[1];
           console.log("title", title);
-
-          // Get the pathname for saving the image later
-          console.log({ route });
-
-          let path = route.pathname.replace("/posts/", "");
 
           // Get the html
           const html = fs
@@ -36,13 +38,12 @@ module.exports = () => {
             width: 1200,
             height: 630,
           });
-          let directory = fileURLToPath(new URL("./assets/posts", dir));
-          if (!fs.existsSync(directory)) {
-            fs.mkdirSync(directory);
-          }
+
           await page
             .screenshot({
-              path: fileURLToPath(new URL(`./assets/posts/${path}.png`, dir)),
+              path: fileURLToPath(
+                new URL(`./assets${route.pathname}.png`, dir)
+              ),
               encoding: "binary",
             })
             .catch((err) => console.error(err));

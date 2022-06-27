@@ -5,5 +5,13 @@ import ogimage from "./src/integrations/og-image.cjs";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), svelte(), ogimage()],
+  integrations: [
+    tailwind(),
+    svelte(),
+    ogimage({
+      config: {
+        path: "/posts/",
+      },
+    }),
+  ],
 });
