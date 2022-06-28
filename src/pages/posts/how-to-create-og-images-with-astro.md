@@ -8,7 +8,7 @@ description: A guide on how to create Open Graph images using an astro integrati
 slug: how-to-create-og-images-with-astro
 ---
 
-In this guide i will explait to you what Open Graph images are, and how to set them up with your astro blog.
+In this guide i will explain to you what Open Graph images are, and how to set them up with your astro blog.
 
 # What even are Open Graph images?
 
