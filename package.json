@@ -2,10 +2,10 @@
   "name": "@example/blog",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev --host",
-    "start": "astro dev",
+    "dev": "astro dev --host --experimental-integrations",
+    "start": "astro dev --experimental-integrations",
     "build": "astro build --experimental-integrations",
-    "preview": "astro preview"
+    "preview": "astro preview --experimental-integrations"
   },
   "devDependencies": {
     "@astrojs/tailwind": "^0.1.2",
@@ -15,6 +15,7 @@
     "@astrojs/svelte": "^0.1.3",
     "@tailwindcss/typography": "^0.5.2",
     "aos": "^2.3.4",
+    "astro-og-image": "^1.0.3",
     "node-webshot": "^1.0.4",
     "puppeteer": "^15.1.1",
     "svelte": "^3.48.0",

@@ -6,6 +6,7 @@ specifiers:
   '@tailwindcss/typography': ^0.5.2
   aos: ^2.3.4
   astro: ^1.0.0-beta.30
+  astro-og-image: ^1.0.3
   node-webshot: ^1.0.4
   puppeteer: ^15.1.1
   svelte: ^3.48.0
@@ -16,6 +17,7 @@ dependencies:
   '@astrojs/svelte': 0.1.4_svelte@3.48.0
   '@tailwindcss/typography': 0.5.2_tailwindcss@3.1.0
   aos: 2.3.4
+  astro-og-image: 1.0.3
   node-webshot: 1.0.4
   puppeteer: 15.1.1
   svelte: 3.48.0
@@ -729,6 +731,18 @@ packages:
     dependencies:
       tslib: 2.4.0
     dev: true
+
+  /astro-og-image/1.0.3:
+    resolution: {integrity: sha512-Dn79R3rAglT4hGrYN3g0uEEF3eMGmGaVs/7XCjNzR654Vqz1jOLisPYRLiszUaEed6gARdGFGLeWc6tXbxRS6g==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      puppeteer: 15.1.1
+    transitivePeerDependencies:
+      - bufferutil
+      - encoding
+      - supports-color
+      - utf-8-validate
+    dev: false
 
   /astro/1.0.0-beta.42:
     resolution: {integrity: sha512-altpXVyiReQFmRwHV0/GDWrxE8YJ2bhINA6sO+7Qhyh2pbwD8FB80Vb6mHuKjksgTtdexJxrGKrMtAqXtq8oxQ==}

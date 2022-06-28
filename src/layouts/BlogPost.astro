@@ -1,17 +1,15 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
 import BlogNavbar from '../components/BlogNavbar.svelte';
-import TableOfContents from "../components/TableOfContents.svelte"
 
 const { content } = Astro.props;
-const { title, description, publishDate, author, heroImage, permalink, alt } = content;
-
+const { title, description, publishDate, slug } = content;
 ---
 
 <html lang={content.lang || 'en'}>
 	<head>
 		<link rel="stylesheet" href="https://raw.githubusercontent.com/PrismJS/prism-themes/master/themes/prism-night-owl.css"/>
-		<BaseHead {title} {description} {permalink} />
+		<BaseHead {title} {description} {slug} {publishDate} />
     <style>
       html {
         scroll-padding-top: 20px;
@@ -27,7 +25,19 @@ const { title, description, publishDate, author, heroImage, permalink, alt } = c
         </article>
       </main>
       <aside>
-        <TableOfContents client:only></TableOfContents>
+        <!-- <TableOfContents client:only></TableOfContents> -->
+        <div class="fixed pt-64">
+          {content.astro.headers.map((heading) => 
+              <a href={`#${heading.slug}`}>
+                <div
+                  class={`border-l-4 hover:border-[#BA1200] border-[#010c13] text-white text-lg pl-[${heading.depth * 0.25 * 6}rem] py-[3px]`}
+                >
+                  {heading.text}
+                </div>
+              </a>
+            )}
+        </div>
+        
       </aside>
 	</body>
 </html>

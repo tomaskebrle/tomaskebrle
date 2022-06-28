@@ -4,9 +4,8 @@ setup: |
   import Code from '../../components/Code.svelte'
 title: How to setup svelte-kit with firebase v9
 publishDate: 05 Feb 2022
-name: Nate Moore
-value: 128
 description: Step by step guide to setting up sveltekit with firebase, including authentication, svelte stores and more.
+slug: sveltekit-with-firebase
 ---
 
 In this guide I will show you how to use firebase version 9 with sveltekit the best way I could find.
