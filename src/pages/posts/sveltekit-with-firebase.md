@@ -78,7 +78,7 @@ export const auth = getAuth();
 This is all you have to do. Now when you want to use fireebase you just have to pass these variabled we just created to the functions like this.
 
 <Code filename="index.svelte" client:load>
-  ```html
+```html
   <script>
     import { db } from '$lib/firebase';
     import {doc, getDoc} from "@firebase/firestore";
@@ -90,5 +90,5 @@ This is all you have to do. Now when you want to use fireebase you just have to 
   </script>
   
   <h1>Welcome back {userData.displayName}</h1>
-  ```
+```
 </Code>
