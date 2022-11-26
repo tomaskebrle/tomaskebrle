@@ -27,7 +27,7 @@ const language:Language = {
   },
   about: {
     title: "About me",
-    text : "Hello 👋, I am a 16 year old programmer, web-developer and web-designer from Czech republic. I study there on an all-around Grammar School, but all my programming knowledge is entirely self taught. I mostly work with web-technologies, but I am also learning how to do backend, and I am quite intersted in Linux and DevOps. I am also <a href=\"assets/dofe.pdf\" class=\"text-[#666] hover:underline\">DofE bronze award holder</a>, where my main goal was to improve my programming skills.",
+    text : "Hello 👋, I am a 17 year old programmer, web-developer and web-designer from Czech republic. I study there on an all-around Grammar School, but all my programming knowledge is entirely self taught. I mostly work with web-technologies, but I am also learning how to do backend, and I am quite intersted in Linux and DevOps. I am also <a href=\"assets/dofe.pdf\" class=\"text-[#666] hover:underline\">DofE bronze award holder</a>, where my main goal was to improve my programming skills.",
   },
   portfolio: {
     card1: {
@@ -59,7 +59,7 @@ const language:Language = {
 	<body>
   <style>
       main{
-        background-image: linear-gradient(0deg, #031927 35%, rgba(3, 25, 39, 0.85) 100%), url("/assets/bg.jpg");
+        background-image: linear-gradient(0deg, #031927 35%, rgba(3, 25, 39, 0.85) 100%), url("/assets/bg.webp");
         background-position: center;
         background-size: cover;
       }
@@ -69,7 +69,7 @@ const language:Language = {
       <Header tagline={language.header.tagline}/>
       <About text={language.about.text} title={language.about.title}/>
       <Portfolio portfolio={language.portfolio}/>
-      <Contact contact={language.contact}></Contact>
+      <Contact contact={language.contact} nav={language.nav} ></Contact>
       <Blog/>
     </main>
     <Footer></Footer>

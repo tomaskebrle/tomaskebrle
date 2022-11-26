@@ -4,6 +4,8 @@ import BlogNavbar from '../components/BlogNavbar.svelte';
 
 const { content } = Astro.props;
 const { title, description, publishDate, slug } = content;
+
+console.log(content)
 ---
 
 <html lang={content.lang || 'en'}>
@@ -27,7 +29,7 @@ const { title, description, publishDate, slug } = content;
       <aside>
         <!-- <TableOfContents client:only></TableOfContents> -->
         <div class="fixed pt-64">
-          {content.astro.headers.map((heading) => 
+          <!-- {content.astro.headers.map((heading) => 
               <a href={`#${heading.slug}`}>
                 <div
                   class={`border-l-4 hover:border-[#BA1200] border-[#010c13] text-white text-lg pl-[${heading.depth * 0.25 * 6}rem] py-[3px]`}
@@ -35,7 +37,7 @@ const { title, description, publishDate, slug } = content;
                   {heading.text}
                 </div>
               </a>
-            )}
+            )} -->
         </div>
         
       </aside>
