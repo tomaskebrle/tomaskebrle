@@ -1,0 +1,51 @@
+<style>
+  .square > * {
+    width: 500px;
+    height: 500px;
+    position:absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left:50%;
+  }
+
+  .square {
+    overflow: hidden;
+  }
+
+  .blue-square {
+    animation: unveilTopography 1s ease-in-out;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes unveilTopography {
+    to {
+      height: 0px;
+      margin-top: 250px;
+    }
+  }
+
+  .background {
+    animation: unveilMainPage 1s ease-in-out;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes unveilMainPage {
+    to {
+      height: 0;
+      margin-top: 100%
+    }
+  }
+
+</style>
+
+<div class="w-screen h-screen fixed grid place-items-center bg-secondary background">
+<div class="grid place-items-center w-screen h-screen fixed z-10">
+  <div class="square">
+      <div class="bg-primary blue-square"></div>
+      <img src="/topography.svg" class="topography" />
+  </div>
+</div>
+
+</div>
