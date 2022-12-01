@@ -1,19 +1,12 @@
-import { defineConfig } from "astro/config";
-import svelte from "@astrojs/svelte";
+import { defineConfig } from 'astro/config';
+
+// https://astro.build/config
 import tailwind from "@astrojs/tailwind";
-import ogimage from "astro-og-image";
-import mdx from "@astrojs/mdx";
+
+// https://astro.build/config
+import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [
-    tailwind(),
-    svelte(),
-    mdx(),
-    ogimage({
-      config: {
-        path: "/posts/",
-      },
-    }),
-  ],
+  integrations: [tailwind(), react()]
 });
