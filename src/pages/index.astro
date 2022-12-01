@@ -1,20 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
 import Load from '../components/Load';
+import Slides from '../components/Slides';
 ---
 
 <Layout title="Welcome to Astro.">
   <Load client:load/>
-	<main class="h-screen w-screen">
-		
-	</main>
+	<Slides client:load></Slides>
 </Layout>
 
-<style>
-  main {
-    background: url("/bg.png");
-    background-size: cover;
-    background-position: center;
-  }
-</style>
