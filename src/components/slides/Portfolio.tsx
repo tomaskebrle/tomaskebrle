@@ -6,7 +6,7 @@ export default function Portfolio() {
     <Wrapper title="Portfolio" background="graph_paper">
       <div className="xl:flex gap-8">
         <span className="w-5/12">
-          <h2 className="text-4xl font-serif">Maturita Book</h2>
+          <h2 className="text-4xl font-serif mb-4">Maturita Book</h2>
           <p className="text-justify mb-2">
             A web application for students to rate books, from the school
             reading list. It allows students to rate their favorite books, sort

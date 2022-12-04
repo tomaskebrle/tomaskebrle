@@ -15,12 +15,21 @@ export function Link({
 }: {
   children: any;
   link: string;
-  type: "github" | "site";
+  type: "github" | "site" | "mail";
 }) {
   return (
     <a href={link}>
       <div className="flex items-center bg-tertiary p-3 gap-3 font-mono hover:bg-primary duration-300">
-        <img src={type === "github" ? "/github.svg" : "/globe.svg"} alt="" />
+        <img
+          src={
+            type === "github"
+              ? "/github.svg"
+              : type == "site"
+              ? "/globe.svg"
+              : "/mail.svg"
+          }
+          alt=""
+        />
         {children}
       </div>
     </a>

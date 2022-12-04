@@ -45,7 +45,7 @@ export default function About() {
 
 function Point({ point }: { point: string }) {
   return (
-    <li className="flex items-center gap-3 my-1 text-xl">
+    <li className="flex items-center gap-3 my-1 xl:text-xl">
       <div className="text-primary">&gt;</div>
       {point}
     </li>

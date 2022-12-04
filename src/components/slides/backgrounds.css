@@ -19,5 +19,5 @@
 }
 
 p {
-  @apply text-xl;
+  @apply xl:text-xl;
 }

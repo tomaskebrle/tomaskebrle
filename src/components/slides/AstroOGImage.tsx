@@ -6,7 +6,7 @@ export default function Portfolio() {
     <Wrapper title="Portfolio" background="graph_paper">
       <div className="xl:flex gap-8">
         <span className="w-7/12">
-          <h2 className="text-4xl font-serif">Astro OG Image</h2>
+          <h2 className="text-4xl font-serif mb-4">Astro OG Image</h2>
           <p className="text-justify mb-2">
             An astro integration for optimalizing SEO of sites, by generating
             Open Graph images, on build time.
