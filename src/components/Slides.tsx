@@ -8,17 +8,6 @@ export default function Slides() {
   const [index, setIndex] = useState(0);
   const control = useAnimationControls();
 
-  useEffect(() => {
-    console.log(index);
-  }, [index]);
-
-  const leftToRight = async () => {
-    await control.start({
-      left: ["-100%", "0%"],
-      transition: { duration: 1 },
-    });
-  };
-
   const animate = async (coords: string[]) => {
     await control.start({
       left: coords,
@@ -26,18 +15,28 @@ export default function Slides() {
     });
   };
 
+  const previousSlide = async () => {
+    console.log("previous");
+    await animate(["-100%", "0%"]);
+    setIndex(Math.max(0, index - 1));
+    await animate(["0%", "200%"]);
+  };
+
+  const nextSlide = async () => {
+    console.log("next");
+    await animate(["200%", "0%"]);
+    setIndex(Math.min(index + 1, slidesArr.length - 1));
+    await animate(["0%", "-100%"]);
+  };
+
   const handleSlideChange = async (deltaY: number) => {
     if (canChange) {
       setCanChange(false);
 
-      if (deltaY < 0) {
-        await animate(["200%", "0%"]);
-        setIndex(Math.max(0, index - 1));
-        await animate(["0%", "-100%"]);
+      if (deltaY > 0) {
+        await nextSlide();
       } else {
-        await animate(["-100%", "0%"]);
-        setIndex(Math.min(index + 1, slidesArr.length - 1));
-        await animate(["0%", "200%"]);
+        await previousSlide();
       }
 
       setTimeout(() => {
@@ -46,10 +45,35 @@ export default function Slides() {
     }
   };
 
+  const [touchStart, setTouchStart] = useState(null);
+  const [touchEnd, setTouchEnd] = useState(null);
+
+  // the required distance between touchStart and touchEnd to be detected as a swipe
+  const minSwipeDistance = 50;
+
+  const onTouchStart = (e: any) => {
+    setTouchEnd(null); // otherwise the swipe is fired even with usual touch events
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const onTouchMove = (e: any) => setTouchEnd(e.targetTouches[0].clientX);
+
+  const onTouchEnd = async () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const isUpSwipe = distance > minSwipeDistance;
+    const isDownSwipe = distance < -minSwipeDistance;
+    if (isUpSwipe || isDownSwipe)
+      isUpSwipe ? await nextSlide() : await previousSlide();
+  };
+
   return (
     <>
       <main
         className="h-screen w-screen fixed text-white"
+        onTouchStart={onTouchStart}
+        onTouchMove={onTouchMove}
+        onTouchEnd={onTouchEnd}
         onWheel={(e) => {
           handleSlideChange(e.deltaY);
         }}

@@ -5,7 +5,7 @@ export default function Load() {
     <motion.div
       className="fixed w-screen h-screen bg-secondary overflow-hidden z-50"
       animate={{ bottom: "-100%" }}
-      transition={{ delay: 2, duration: 0.5, ease: "easeIn" }}
+      transition={{ delay: 1, duration: 0.5, ease: "easeIn" }}
     >
       <div className="square">
         <motion.svg
