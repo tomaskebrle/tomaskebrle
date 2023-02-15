@@ -1,17 +1,17 @@
 <h1 align="center">Hi 👋, I'm Tomáš</h1>
 <h3 align="center">Teen learning to code</h3>
 
-- 🔭 I’m currently working on [School Mesh](https://schoolmeshapp.com)
+- 🔭 I’m currently working on [School Mesh](https://school.mesh.sk)
 
-- 🌱 I’m currently learning **Svelte, Firebase, TailwindCSS**
+- 🌱 I’m currently learning **Svelte, Pocketbase, TailwindCSS, Docker**
 
-- 👨‍💻 All of my projects are available at [https://tomaskebrle.cz](https://tomaskebrle.cz)
+- 👨‍💻 All of my projects are available at [tomaskebrle.cz](https://tomaskebrle.cz)
 
-- 📝 I ~regularly~ write articles on [https://tomaskebrle.cz/blog](https://tomaskebrle.cz/post)
+- 📝 I ~regularly~ write articles on [tomaskebrle.cz/blog](https://tomaskebrle.cz/blog)
 
 - 📫 How to reach me **contact@tomaskebrle.cz**
 
-- ⚡ Fun fact **I use Arch btw**
+- ⚡ Fun fact **I use Fedora btw**
 
 ---
 
@@ -60,6 +60,5 @@
 
 # Stats
 
-![Grade](https://github-readme-stats.vercel.app/api?username=tomaskebrle&theme=dark&count_private=true)
 ![Most used languages](https://github-readme-stats.vercel.app/api/top-langs/?username=tomaskebrle&theme=dark&count_private=true)
-
+![Grade](https://github-readme-stats.vercel.app/api?username=tomaskebrle&theme=dark&count_private=true)
